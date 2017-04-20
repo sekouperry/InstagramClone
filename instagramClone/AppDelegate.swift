@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init(){
+        super.init()
+        // Connect to Firebase
+        FIRApp.configure()
+        
+    }
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // change the tint color on the Tab Bar to Wet Asphalt
+        UITabBar.appearance().tintColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1)
+        
+        
+       
+        
+        
         // Override point for customization after application launch.
         return true
     }

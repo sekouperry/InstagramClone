@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="0VM-j1-9gb">
+            <objects>
+                <viewController id="N5e-CP-yEk" customClass="CameraViewController" customModule="instagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gdy-1E-eI9"/>
+                        <viewControllerLayoutGuide type="bottom" id="rin-k6-Ywb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dJt-wh-4bV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMe-tq-g34">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-photo" translatesAutoresizingMaskIntoConstraints="NO" id="h89-YT-CUi">
+                                        <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="bhc-Vx-fL3"/>
+                                            <constraint firstAttribute="width" constant="80" id="z2G-YG-AQD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-V7-eUa">
+                                        <rect key="frame" x="96" y="10" width="271" height="80"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ITh-V7-eUa" secondAttribute="bottom" constant="10" id="7So-xd-gZ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ITh-V7-eUa" secondAttribute="trailing" constant="8" id="9r7-Hm-WwP"/>
+                                    <constraint firstItem="h89-YT-CUi" firstAttribute="top" secondItem="vMe-tq-g34" secondAttribute="top" constant="10" id="Owd-Sw-21j"/>
+                                    <constraint firstItem="ITh-V7-eUa" firstAttribute="leading" secondItem="h89-YT-CUi" secondAttribute="trailing" constant="8" id="PAf-o7-Tbk"/>
+                                    <constraint firstItem="ITh-V7-eUa" firstAttribute="top" secondItem="vMe-tq-g34" secondAttribute="top" constant="10" id="ba4-IB-bds"/>
+                                    <constraint firstItem="h89-YT-CUi" firstAttribute="leading" secondItem="vMe-tq-g34" secondAttribute="leading" constant="8" id="dIR-Zq-pfq"/>
+                                    <constraint firstAttribute="bottom" secondItem="h89-YT-CUi" secondAttribute="bottom" constant="10" id="fBI-gE-YMe"/>
+                                    <constraint firstAttribute="height" constant="100" id="nUe-Dv-BWs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIb-ZQ-mPq">
+                                <rect key="frame" x="8" y="560" width="359" height="50"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xFt-C3-vVG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="share:" destination="N5e-CP-yEk" eventType="touchUpInside" id="pcZ-rf-gtd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vMe-tq-g34" firstAttribute="top" secondItem="Gdy-1E-eI9" secondAttribute="bottom" id="8W5-RB-r4j"/>
+                            <constraint firstAttribute="trailing" secondItem="cIb-ZQ-mPq" secondAttribute="trailing" constant="8" id="9nq-EB-E9U"/>
+                            <constraint firstItem="rin-k6-Ywb" firstAttribute="top" secondItem="cIb-ZQ-mPq" secondAttribute="bottom" constant="8" id="FQn-ri-AFZ"/>
+                            <constraint firstItem="vMe-tq-g34" firstAttribute="leading" secondItem="dJt-wh-4bV" secondAttribute="leading" id="gfz-Xy-h4K"/>
+                            <constraint firstAttribute="trailing" secondItem="vMe-tq-g34" secondAttribute="trailing" id="kgs-Pd-NS0"/>
+                            <constraint firstItem="cIb-ZQ-mPq" firstAttribute="leading" secondItem="dJt-wh-4bV" secondAttribute="leading" constant="8" id="ud2-ez-uly"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="th9-VT-ZR7">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="fb3-gg-H17">
+                            <color key="tintColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clearInputs" destination="N5e-CP-yEk" id="uh2-h8-5cq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextView" destination="ITh-V7-eUa" id="9rH-jO-1lW"/>
+                        <outlet property="clearBarButton" destination="fb3-gg-H17" id="rX1-lu-vri"/>
+                        <outlet property="photoImageView" destination="h89-YT-CUi" id="F5O-hM-asq"/>
+                        <outlet property="shareButton" destination="cIb-ZQ-mPq" id="GOZ-a5-6N2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZn-7i-NTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="926"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BGt-Uf-Uoq">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationCamera" automaticallyAdjustsScrollViewInsets="NO" id="9Kl-zN-oHe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Photo" id="q0d-jL-AaE">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jp4-V8-Ojf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N5e-CP-yEk" kind="relationship" relationship="rootViewController" id="kCZ-IS-H0b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c08-rS-fxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="890"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Photo" width="22" height="23"/>
+        <image name="placeholder-photo" width="512" height="512"/>
+    </resources>
+</document>
